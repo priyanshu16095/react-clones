@@ -1,0 +1,145 @@
+:root {
+    --twitterBlue: #1DA1F2;
+    --twitterLightBlue: #50b7f5;
+    --borderColor: #e6ecf0;
+}
+
+/* -------------sidebar---------------- */
+.sidebar {
+    flex: 0.2;
+    border-right: 1px solid var(--borderColor);
+    padding: 10px 20px;
+}
+.sidebarOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.sidebarOption:hover {
+    background-color: #e8f5fe;
+    color: var(--twitterLightBlue);
+    border-radius: 30px;
+    transition: color 100ms ease-out;
+}
+.sidebarOption > .MuiSvgIcon-root {
+    padding: 15px;
+    font-size: 28px !important;
+}
+.sidebarOption > h3 {
+    font-size: 20px;
+}
+.tweetButton {
+    background-color: var(--twitterBlue) !important;
+    border: none !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    height: 50px !important;
+}
+.sidebarOption-active {
+    color: var(--twitterLightBlue);
+}
+
+/* -------------feed---------------- */
+.feed {
+    flex: 0.5;
+    border-right: 1px solid var(--borderColor);
+    overflow-y: scroll;
+}
+.feed::-webkit-scrollbar {
+    display: none;
+}
+
+/* -------------tweetBox---------------- */
+.tweetBox {
+    border-bottom: 1px solid var(--borderColor);
+}
+.tweetBox > form {
+    display: flex;
+    gap: 0.3rem;
+    padding: 20px 8px;
+}
+.tweetBox-inputBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.tweetBox-inputBox > input {
+    flex: 1;
+    height: 200x;
+    font-size: 20px;
+    padding: 5px;
+    border: none;
+}
+.tweetBox-icons {
+    display: flex;
+    align-items: center;
+}
+.tweetBox-icons > .MuiButtonBase-root {
+    color: var(--twitterBlue);
+}
+.tweetBox-icons > .tweetButton {
+    height: 40px !important;
+    width: 80px !important;
+    margin-left: auto;
+}
+
+/* -------------post---------------- */
+.post {
+    display: flex;
+    gap: 0.3rem;
+    padding: 5px;
+    border-bottom: 1px solid var(--borderColor);
+}
+.postContent-user {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 10px 0px;
+}
+.postContent-user > .user {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+}
+.postContent-user > p {
+    color: gray;
+}
+.postContent > img {
+    width: 530px;
+    border-radius: 4px;
+}
+.postFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.postFooter .MuiButtonBase-root > p {
+    font-size: 15px;
+}
+
+/* -------------widgets---------------- */
+.widgets {
+    flex: 0.3;
+}
+.widgetsInput {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 8px 10px;
+    border-radius: 30px;
+    background-color: rgb(248, 246, 246);
+    margin: 10px;
+}
+.widgetsInput > input {
+    border: none;
+    font-size: 16px;
+    background-color: rgb(248, 246, 246);
+}
+.widgetContainer {
+    padding: 10px 20px;
+    background-color: rgb(248, 246, 246);
+}
