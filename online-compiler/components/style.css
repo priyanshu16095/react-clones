@@ -1,0 +1,135 @@
+:root {
+    --nav-background: #1f2023;
+    --body-background: #1c2130;
+    --button-blue: #0556f3;
+    --left-color: #383b40;
+    --border-color: #494d59;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--border-color);
+}
+.border-right {
+    border-right: 1px solid var(--border-color);
+}
+.flex-v {
+    display: flex;
+    flex-direction: column;
+}
+.flex-h {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+button {
+    cursor: pointer;
+}
+.button-w {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 0.2rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    color: inherit;
+}
+.button-n {
+    background-color: var(--button-blue);
+    border: none;
+    padding: 0.5rem 1rem;
+}
+.button-n:hover {
+    background-color: #064bd4;
+}
+
+.icon {
+    font-size: 30px;
+    margin: 0.3rem;
+    border: 1px solid gray;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.ace_editor {
+    font-size: 1.2rem !important;
+    border: none !important;
+}
+.ace_gutter, .ace_scrollbar, .ace_content {
+    background-color: var(--body-background) !important;
+} 
+.ace_layer {
+    border-right: 1px solid var(--border-color) !important;
+}
+
+.navbar  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+    background-color: var(--nav-background);
+    color: white;
+}
+
+.body > .left {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--left-color);
+    color: white;
+}
+.body > .mid {
+    background-color: var(--body-background);
+}
+.body > .right {
+    background-color: var(--body-background);
+}
+
+.body > .mid {
+    display: flex;
+    flex-direction: column;
+}
+.mid-nav {
+    flex: 0.08;
+    background-color: var(--left-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mid-nav-file {
+    background-color: var(--body-background);
+    height: 100%;
+    padding: 0rem 2rem;
+    font-size: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.mid-nav-icons {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-right: 1rem;
+}
+.mid-code {
+    flex: 0.92;
+}
+.MuiSvgIcon-root {
+    color: gray;
+    padding: 0.2rem;
+    border: 1px solid gray;
+    border-radius: 0.2rem;
+}
+
+.body > .right {
+    display: flex;
+    flex-direction: column;
+}
+.right-nav {
+    flex: 0.08;
+    background-color: var(--left-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0rem 1rem;
+}

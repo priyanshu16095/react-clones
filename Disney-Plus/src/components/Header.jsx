@@ -2,38 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { app } from '../firebase'
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
-import { useDispatch, useSelector } from 'react-redux';
-// import { useHistory } from 'react-router-dom'
-import { selectUserName, selectUserPhoto, setUserLoginDetails } from '../features/users/userSlice';
 
 const auth = getAuth(app)
 const googleAuthProvider = new GoogleAuthProvider()
-const db = getFirestore(app);
-const storage = getStorage(app);
 
 function Header() {
-    const dispatch = useDispatch()
-    // const history = useHistory()
-    const username = useSelector(selectUserName)
-    const userphoto = useSelector(selectUserPhoto)
-
     const handleAuth = () => {
         signInWithPopup(auth, googleAuthProvider)
         .then(result => setUser(result.user))
         .catch(err => console.log(err))
-    }
-
-    const setUser = (user) => {
-        dispatch(
-            setUserLoginDetails({
-                name: user.displayName,
-                email: user.email,
-                photo: user.photoURL
-            })
-        )
-        
     }
 
     return (
